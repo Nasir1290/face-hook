@@ -4,6 +4,7 @@ import HomeIcon from "../assets/icons/home.svg";
 import Notification from "../assets/icons/notification.svg";
 import Avatar from "../assets/images/avatars/avatar_1.png";
 import Logout from "../components/auth/Logout";
+import { Navigate } from "react-router-dom";
 const Header = () => {
   return (
     <div>
@@ -28,7 +29,8 @@ const Header = () => {
 
             <Logout/>
 
-            <button className="flex-center !ml-8 gap-3">
+            <button
+            className="flex-center !ml-8 gap-3">
               <span className="text-lg font-medium lg:text-xl">Sumit</span>
               <img
                 className="max-h-[32px] max-w-[32px] lg:max-h-[44px] lg:max-w-[44px]"
