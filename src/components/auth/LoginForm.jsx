@@ -13,7 +13,7 @@ const LoginForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-    setError
+    setError,
   } = useForm();
 
   const submitForm = async (formData) => {
@@ -26,7 +26,9 @@ const LoginForm = () => {
       if (response.status === 200) {
         const { user, token } = response.data;
 
-        const { authToken, refreshToken } = token;
+        // const { authToken, refreshToken } = token;
+        const authToken = token.token;
+        const refreshToken = token.refreshToken;
 
         console.log(`Login time Auth Token: ${authToken}`);
 
@@ -36,10 +38,10 @@ const LoginForm = () => {
       }
     } catch (error) {
       console.error(error);
-      setError("root.random",{
-        type:"random",
-        message:`User with Given credentials not found Email was:${formData.email}`
-      })
+      setError("root.random", {
+        type: "random",
+        message: `User with Given credentials not found Email was:${formData.email} and password was:${formData.password}`,
+      });
     }
   };
 
@@ -78,6 +80,7 @@ const LoginForm = () => {
             id="password"
           />
         </Field>
+        <p>{errors.root?.random?.message}</p>
         <Field>
           <button
             className="auth-input bg-lwsGreen font-bold text-deepDark transition-all hover:opacity-90"
