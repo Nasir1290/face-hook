@@ -3,7 +3,7 @@ import { api } from "../api";
 import useAuth from "./useAuth";
 import axios from "axios";
 
-const useAxiosAuthentication = () => {
+export default useAxiosAuthentication = () => {
     const { auth, setAuth } = useAuth();
     useEffect(() => {
 
