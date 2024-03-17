@@ -1,13 +1,9 @@
 import React from 'react'
-import Header from '../common/Header'
-import useAuth from '../hooks/useAuth'
 
 const HomePage = () => {
-  const {auth} = useAuth();
-  console.log(auth)
   return (
     <div>
-      <Header/>
+      Home Page
     </div>
   )
 }
