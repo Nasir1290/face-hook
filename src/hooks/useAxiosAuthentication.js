@@ -4,10 +4,11 @@ import useAuth from "./useAuth";
 import axios from "axios";
 
 const useAxiosAuthentication = () => {
-    const { auth } = useAuth();
+    const { auth, setAuth } = useAuth();
     useEffect(() => {
 
-        api.interceptors.request.use(
+        // request Interceptors....
+        const requestIntercept = api.interceptors.request.use(
 
             (config) => {
                 const authToken = auth?.authToken;
@@ -19,10 +20,12 @@ const useAxiosAuthentication = () => {
                 return config;
 
             },
+
             (error) => Promise.reject(error)
         );
 
-        api.interceptors.response.use(
+        // response Interceptors
+        const responseIntercept = api.interceptors.response.use(
 
             (response) => response,
 
@@ -32,7 +35,6 @@ const useAxiosAuthentication = () => {
                 if (error.response.status === 401 && !originalRequest._retry) {
                     originalRequest._retry = true;
 
-
                     try {
                         const refreshToken = auth?.refreshToken;
 
@@ -40,6 +42,8 @@ const useAxiosAuthentication = () => {
 
                         const { token } = response.data;
                         console.log(`new Token : ${token}`);
+
+                        setAuth({ ...auth, authToken: token });
 
                         originalRequest.headers.authorization = `Bearer ${token}`;
 
@@ -50,13 +54,18 @@ const useAxiosAuthentication = () => {
                     }
 
                 }
-                
+
                 // after If Block and under error block of response interceptors.......
                 return Promise.reject(error);
 
             }
-        )
+        );
+
+        return () => {
+            api.interceptors.request.eject(requestIntercept);
+            api.interceptors.response.eject(responseIntercept);
+        }
 
 
-    }, []);
+    }, [auth.authToken]);
 }

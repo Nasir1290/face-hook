@@ -5,8 +5,14 @@ import Notification from "../assets/icons/notification.svg";
 import Avatar from "../assets/images/avatars/avatar_1.png";
 import Logout from "../components/auth/Logout";
 import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
+
 const Header = () => {
+
+  const { auth } = useAuth();
+
   const navigate = useNavigate();
+
   return (
     <div>
       <nav className="sticky top-0 z-50 border-b border-[#3F3F3F] bg-[#1E1F24] py-4">
@@ -30,9 +36,10 @@ const Header = () => {
             <Logout />
 
             <button
-            onClick={() => navigate("/me")}
-            className="flex-center !ml-8 gap-3">
-              <span className="text-lg font-medium lg:text-xl">Sumit</span>
+              onClick={() => navigate("/me")}
+              className="flex-center !ml-8 gap-3"
+            >
+              <span className="text-lg font-medium lg:text-xl">{auth?.user?.firstName}</span>
               <img
                 className="max-h-[32px] max-w-[32px] lg:max-h-[44px] lg:max-w-[44px]"
                 src={Avatar}
