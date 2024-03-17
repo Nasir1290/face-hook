@@ -3,7 +3,7 @@ import { api } from "../api";
 import useAuth from "./useAuth";
 import axios from "axios";
 
-export default useAxiosAuthentication = () => {
+const useAxiosAuthentication = () => {
     const { auth, setAuth } = useAuth();
     useEffect(() => {
 
@@ -25,6 +25,7 @@ export default useAxiosAuthentication = () => {
         );
 
         // response Interceptors
+
         const responseIntercept = api.interceptors.response.use(
 
             (response) => response,
@@ -38,8 +39,7 @@ export default useAxiosAuthentication = () => {
                     try {
                         const refreshToken = auth?.refreshToken;
 
-                        const response = await axios.post(`${import.meta.env.VITE_SERVER_BASE_URL}/auth/refreshToken`, { refreshToken })
-
+                        const response = await axios.post(`${import.meta.env.VITE_SERVER_BASE_URL}/auth/refresh-token`, { refreshToken })
                         const { token } = response.data;
                         console.log(`new Token : ${token}`);
 
@@ -60,7 +60,7 @@ export default useAxiosAuthentication = () => {
 
             }
         );
-
+            // useEffect cleanup function
         return () => {
             api.interceptors.request.eject(requestIntercept);
             api.interceptors.response.eject(responseIntercept);
@@ -68,4 +68,9 @@ export default useAxiosAuthentication = () => {
 
 
     }, [auth.authToken]);
+    // return api from our useAxiosAuthentication hook
+    // this api is use axios and we intercept on both request and response .... 
+    return api;
 }
+
+export default useAxiosAuthentication;
