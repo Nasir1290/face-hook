@@ -18,4 +18,5 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  "no-useless-catch":0
 }

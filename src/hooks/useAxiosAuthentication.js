@@ -60,6 +60,7 @@ const useAxiosAuthentication = () => {
 
             }
         );
+        
             // useEffect cleanup function
         return () => {
             api.interceptors.request.eject(requestIntercept);
