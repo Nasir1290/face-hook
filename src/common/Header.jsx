@@ -6,12 +6,13 @@ import Avatar from "../assets/images/avatars/avatar_1.png";
 import Logout from "../components/auth/Logout";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import { useProfile } from "../hooks/useProfile";
 
 const Header = () => {
-
   const { auth } = useAuth();
-
   const navigate = useNavigate();
+  const { state } = useProfile();
+  const user = state?.user ?? auth?.user;
 
   return (
     <div>
@@ -39,10 +40,12 @@ const Header = () => {
               onClick={() => navigate("/me")}
               className="flex-center !ml-8 gap-3"
             >
-              <span className="text-lg font-medium lg:text-xl">{auth?.user?.firstName}</span>
+              <span className="text-lg font-medium lg:text-xl">
+                {user?.firstName}  {user?.lastName}
+              </span>
               <img
                 className="max-h-[32px] max-w-[32px] lg:max-h-[44px] lg:max-w-[44px]"
-                src={Avatar}
+                src={`${import.meta.env.VITE_SERVER_BASE_URL}/${user?.avatar}`}
                 alt=""
               />
             </button>

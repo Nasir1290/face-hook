@@ -9,7 +9,8 @@ const ProfilePage = () => {
 
   const api = useAxiosAuthentication();
 
-  const {state, dispatch} = useProfile();
+  const { state, dispatch } = useProfile();
+  
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -19,7 +20,10 @@ const ProfilePage = () => {
         const response = await api.get(
           `${import.meta.env.VITE_SERVER_BASE_URL}/profile/${auth?.user?.id}`
         );
-        dispatch({ type: actions.profile.DATA_FETCHED, data: response.data });
+        dispatch({
+          type: actions.profile.DATA_FETCHED,
+          data: response.data,
+        });
       } catch (error) {
         dispatch({
           type: actions.profile.DATA_FETCHED_ERRR,
@@ -32,6 +36,7 @@ const ProfilePage = () => {
 
     fetchProfile();
   }, []);
+
 
   if (state?.loading) {
     return <div>Loading Profile ...</div>;
