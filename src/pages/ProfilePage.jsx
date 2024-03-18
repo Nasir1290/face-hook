@@ -10,7 +10,6 @@ const ProfilePage = () => {
   const api = useAxiosAuthentication();
 
   const { state, dispatch } = useProfile();
-  
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -38,12 +37,16 @@ const ProfilePage = () => {
   }, []);
 
 
+  
   if (state?.loading) {
     return <div>Loading Profile ...</div>;
   }
   return (
     <div>
-      {state?.user?.firstName} {state?.user?.lastName}
+      <p>
+        Wellcome {state?.user?.firstName} {state?.user?.lastName}{" "}
+      </p>
+      <p>You have {state?.posts.length} Posts</p>
     </div>
   );
 };
