@@ -30,7 +30,7 @@ const LoginForm = () => {
         const authToken = token.token;
         const refreshToken = token.refreshToken;
 
-        console.log(`Login time Auth Token: ${authToken}`);
+        // console.log(`Login time Auth Token: ${authToken}`);
 
         setAuth({ user, authToken, refreshToken });
 
