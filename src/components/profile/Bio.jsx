@@ -10,14 +10,37 @@ const Bio = () => {
   return (
     <div className="mt-4 flex items-start gap-2 lg:mt-6">
       <div className="flex-1">
-        <p className="leading-[188%] text-gray-400 lg:text-lg">
-          {state?.user?.bio}
-        </p>
+        {!editMode ? (
+          <p className="leading-[188%] text-gray-400 lg:text-lg">
+            {state?.user?.bio}
+          </p>
+        ) : (
+          <textarea
+            className=" p-2 leading-[-188W%] text-gray-600 lg:text-lg rounded-md"
+            rows={4}
+            cols={55}
+            value={bio}
+            onChange={(e) => setBio(e.target.value)}
+          />
+        )}
       </div>
-      {/* <!-- Edit Bio button. The Above bio will be editable when clicking on the button --> */}
-      <button className="flex-center h-7 w-7 rounded-full">
-        <img src={EditIcon} alt="Edit" />
-      </button>
+      {!editMode ? (
+        <button
+          className="flex-center h-7 w-7 rounded-full"
+          onClick={() => setEditMode(true)}
+        >
+          <img src={EditIcon} alt="Edit" />
+        </button>
+      ) : (
+        <button
+          className="flex-center h-8 w-12 bg-green-500 font-bold rounded-lg hover:bg-green-400"
+          onClick={() => {
+            setEditMode(false);
+          }}
+        >
+          ✔
+        </button>
+      )}
     </div>
   );
 };
