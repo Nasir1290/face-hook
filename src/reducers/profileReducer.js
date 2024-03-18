@@ -6,3 +6,9 @@ const initialState = {
     loading:false,
     error:null
 };
+
+const userReducer = (state,action) => {
+    switch(action.type) {
+        
+    }
+};
