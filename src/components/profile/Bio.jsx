@@ -2,11 +2,43 @@ import React, { useState } from "react";
 import { useProfile } from "../../hooks/useProfile";
 import EditIcon from "../../assets/icons/edit.svg";
 import useAxiosAuthentication from "../../hooks/useAxiosAuthentication";
+import { actions } from "../../actions";
+import useAuth from "../../hooks/useAuth";
+
 const Bio = () => {
-  const { state } = useProfile();
-  const { api } = useAxiosAuthentication();
-  const [bio, setBio] = useState(state?.user?.bio);
+  const { state, dispatch } = useProfile();
+  const auth = useAuth();
+  const api = useAxiosAuthentication();
+  const [bio, setBio] = useState(auth?.auth?.user?.bio ?? state?.user?.bio);
   const [editMode, setEditMode] = useState(false);
+
+
+  const handleBioEdit = async () => {
+    dispatch({
+      type: actions.profile.DATA_FETCHING,
+    });
+    try {
+      const response = await api.patch(
+        `${import.meta.env.VITE_SERVER_BASE_URL}/profile/${state?.user?.id}`,
+        { bio }
+      );
+
+      if (response.status === 200) {
+        dispatch({
+          type: actions.profile.USER_DATA_EDITED,
+          data: response.data,
+        });
+
+        setEditMode(false);
+      }
+    } catch (err) {
+      console.error(err);
+      dispatch({
+        type: actions.profile.DATA_FETCHED_ERRR,
+        error: err.message,
+      });
+    }
+  };
   return (
     <div className="mt-4 flex items-start gap-2 lg:mt-6">
       <div className="flex-1">
@@ -34,9 +66,7 @@ const Bio = () => {
       ) : (
         <button
           className="flex-center h-8 w-12 bg-green-500 font-bold rounded-lg hover:bg-green-400"
-          onClick={() => {
-            setEditMode(false);
-          }}
+          onClick={handleBioEdit}
         >
           ✔
         </button>

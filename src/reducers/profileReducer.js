@@ -4,7 +4,8 @@ const initialState = {
     user: null,
     posts: [],
     loading: false,
-    error: null
+    error: null,
+    avatar:null
 };
 
 const profileReducer = (state, action) => {
@@ -22,10 +23,32 @@ const profileReducer = (state, action) => {
                 user: action.data.user,
                 posts: action.data.posts,
             }
-        default:
-            {
-                return state;
+
+        case actions.profile.USER_DATA_EDITED:
+            return {
+                ...state,
+                loading: false,
+                user: action.data,
             }
+
+        case actions.profile.IMAGE_UPDATED:
+            return {
+                ...state,
+                loading: false,
+                user: {
+                    ...state.user, avatar: action.data.avatar,
+                }
+            }
+
+        case actions.profile.DATA_FETCHED_EROR:
+            return {
+                ...state,
+                loading: false,
+                error: action.error,
+            }
+
+        default:
+            return state;
 
     }
 };
