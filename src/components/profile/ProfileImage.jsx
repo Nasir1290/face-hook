@@ -41,7 +41,6 @@ const ProfileImage = () => {
         type: actions.profile.DATA_FETCHED_ERROR,
         error: error.message,
       });
-
     }
   };
 
