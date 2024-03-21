@@ -1,0 +1,35 @@
+import { actions } from "../actions"
+
+const initialState = {
+    posts: [],
+    loading: false,
+    error: null
+}
+
+const postsReducer = (state, action) => {
+    switch (action.type) {
+        case actions.posts.DATA_FETCHING:
+            return {
+                ...state,
+                loading: true
+            }
+        case actions.posts.DATA_FETCHED:
+            return {
+                ...state,
+                posts: action.data,
+                loading: false
+            }
+
+        case actions.posts.DATA_FETCHED_EROR:
+            return {
+
+                loading: false,
+                error: action.error
+            }
+
+        default:
+            return state;
+    }
+}
+
+export { postsReducer, initialState };
