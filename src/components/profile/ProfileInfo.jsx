@@ -10,7 +10,7 @@ const ProfileInfo = () => {
       <ProfileImage />
 
       <div>
-        <h3 className="text-2xl font-semibold text-white lg:text-[28px]">
+        <h3 className="text-2xl font-semibold text-white lg:text-[28px] bg-gradient-to-r from-red-500 to-blue-500 text-transparent bg-clip-text">
           {state?.user?.firstName} &nbsp; {state?.user?.lastName}
         </h3>
         <p className="leading-[231%] lg:text-lg">{state?.user?.email}</p>

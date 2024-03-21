@@ -63,7 +63,8 @@
         }
       ],
       "likes": [
-        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56"
+        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+        "a302564e-6e49-4dd7-93f8-c740835f3e4b"
       ],
       "createAt": "2024-02-24T12:17:09.169Z"
     },
@@ -110,7 +111,8 @@
         }
       ],
       "likes": [
-        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56"
+        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+        "a302564e-6e49-4dd7-93f8-c740835f3e4b"
       ],
       "createAt": "2024-02-24T12:18:21.686Z"
     },
@@ -469,7 +471,7 @@
       "password": "$2b$08$t5Aar/0hgHTMdCeLtn3KhOlWDVIAHcFUTkRPeWASPhbYAea5kxKvW",
       "firstName": "Saad",
       "lastName": "Hasan",
-      "avatar": "uploads/avatar/avatar-1708849386635-121791126.png",
+      "avatar": "uploads/avatar/avatar-1710990094155-494035189.jpg",
       "email": "saadh392@mail.com",
       "bio": "Saad is an excellent member of LWS who keeps himself updated with technology and stays relevant. He is a tech enthusiast and does not hesitate to help developers in need."
     },
@@ -514,6 +516,23 @@
       "avatar": "uploads/avatar/avatar-1708802845791-219561000.png",
       "email": "rambo@email.com",
       "bio": "I am Rambo!!!"
+    },
+    {
+      "id": "eacbbda5-edd2-4ad0-b2e6-6b7ba6e7c167",
+      "password": "$2b$08$9Cpkbkkz6/gH2AZs78XRXOcAchEFWhwLhAuAvvgAoAy5kksQhcbRG",
+      "firstName": "Nasir",
+      "lastName": "Mia ",
+      "avatar": "uploads/avatar/avatar-1710993292753-410492465.JPG",
+      "email": "nkn24@gmail.com",
+      "bio": "It's Nasir"
+    },
+    {
+      "id": "a302564e-6e49-4dd7-93f8-c740835f3e4b",
+      "password": "$2b$08$C01GOB6oCpC/7X267n.w3.B1S8GEjrz./ibSO..VEijXcYsFCqN6.",
+      "firstName": "Rahim",
+      "lastName": "Sikder",
+      "avatar": "uploads/avatar/avatar-1711009129047-586440443.jpg",
+      "email": "r@mail.com"
     }
   ]
 }

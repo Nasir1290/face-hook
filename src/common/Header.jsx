@@ -40,7 +40,7 @@ const Header = () => {
               onClick={() => navigate("/me")}
               className="flex-center !ml-8 gap-3"
             >
-              <span className="text-lg font-medium lg:text-xl">
+              <span className="text-lg font-medium lg:text-xl bg-gradient-to-r from-red-500 to-blue-500 text-transparent bg-clip-text">
                 {user?.firstName}  {user?.lastName}
               </span>
               <img

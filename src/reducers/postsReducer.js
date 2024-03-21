@@ -15,7 +15,6 @@ const postsReducer = (state, action) => {
                 loading: true
             }
         case actions.posts.DATA_FETCHED:
-            console.log(action.posts)
             return {
                 ...state,
                 posts: action.posts,

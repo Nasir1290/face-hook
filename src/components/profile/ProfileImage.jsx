@@ -46,18 +46,21 @@ const ProfileImage = () => {
 
   return (
     <div>
-      <div className=" overflow-hidden relative mb-8 max-h-[180px] max-w-[180px] rounded-full lg:mb-11 lg:max-h-[218px] lg:max-w-[218px]">
+      <div className=" relative mb-8 max-h-[180px] max-w-[180px] rounded-full lg:mb-11 lg:max-h-[218px] lg:max-w-[218px]">
+       
+       <div className="relative mb-8 max-h-[180px] max-w-[180px] overflow-hidden rounded-full lg:mb-11 lg:max-h-[218px] lg:max-w-[218px]">
         <img
           className="max-w-full rounded-full"
           src={`${import.meta.env.VITE_SERVER_BASE_URL}/${state?.user?.avatar}`}
           alt="User Image"
-        />
+          />
+          </div> 
         <form action="" onSubmit={handleImageUpload}>
           <button
             type="submit"
-            className="flex-center absolute bottom-10 right-4 h-8 w-8 rounded-full font-bold bg-red-600 hover:bg-red-400"
+            className="flex-center absolute top-10 right-[-2rem] h-8 w-8 rounded-full font-bold bg-red-600 hover:bg-red-400"
           >
-            <img src={EditIcon} alt="Edit" />
+            <img  src={EditIcon} alt="Edit" /> 
           </button>
           <input type="file" id="file-upload" hidden ref={imageUploadRef} />
         </form>

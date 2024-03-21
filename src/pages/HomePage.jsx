@@ -23,7 +23,6 @@ const HomePage = () => {
             type: actions.posts.DATA_FETCHED,
             posts: response.data,
           });
-          console.log(response.data);
         }
       } catch (error) {
         console.log(error);
@@ -38,7 +37,6 @@ const HomePage = () => {
     fetchingData();
   }, []);
 
-  console.log(state);
 
   if (state.loading) {
     return <div>Loading....</div>;
