@@ -19,14 +19,12 @@ const HomePage = () => {
         );
 
         if (response.status === 200) {
-          
           dispatch({
             type: actions.posts.DATA_FETCHED,
             posts: response.data,
           });
           console.log(response.data);
         }
-
       } catch (error) {
         console.log(error);
 
@@ -46,16 +44,11 @@ const HomePage = () => {
     return <div>Loading....</div>;
   }
   if (state.error) {
-    <div> OOPS !! An Error Occured !!!!</div>;
+    return <div> OOPS !! An Error Occured !!!!</div>;
   }
 
-  return(
-    <>
-    
-      <PostList posts={state.posts}/>
-    
-    </>
-  )
+
+  return <>{!!state.posts && <PostList posts={state.posts} />}</>;
 };
 
 export default HomePage;
