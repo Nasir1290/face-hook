@@ -3,9 +3,10 @@ import PostList from "../components/posts/PostList";
 import { initialState, postsReducer } from "../reducers/postsReducer";
 import { actions } from "../actions";
 import useAxiosAuthentication from "../hooks/useAxiosAuthentication";
+import { usePost } from "../hooks/usePost";
 
 const HomePage = () => {
-  const [state, dispatch] = useReducer(postsReducer, initialState);
+  const { state, dispatch } = usePost();
   const api = useAxiosAuthentication();
   useEffect(() => {
     dispatch({
@@ -37,14 +38,12 @@ const HomePage = () => {
     fetchingData();
   }, []);
 
-
   if (state.loading) {
     return <div>Loading....</div>;
   }
   if (state.error) {
     return <div> OOPS !! An Error Occured !!!!</div>;
   }
-
 
   return <>{!!state.posts && <PostList posts={state.posts} />}</>;
 };

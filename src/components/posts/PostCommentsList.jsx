@@ -3,7 +3,7 @@ import { useAvatar } from "../../hooks/useAvatar";
 
 const PostCommentsList = ({post,postComment}) => {
     const {avatarUrl} = useAvatar(post);
-    console.log(postComment)
+
   return (
     <div className="space-y-4 divide-y divide-lighterDark pl-2 lg:pl-3">
       <div className="flex items-center gap-3 pt-4">

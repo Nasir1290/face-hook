@@ -28,6 +28,20 @@ const postsReducer = (state, action) => {
                 loading: false,
                 error: action.error
             }
+            
+            case actions.posts.DATA_EDITED:
+                return {
+                    ...state,
+                    loading: false,
+                    posts:[...action.posts,actions.data]
+                }
+            case actions.posts.DATA_EDITED:
+                return {
+                    ...state,
+                    loading: false,
+                    posts:action.data,
+                }
+
 
         default:
             return state;

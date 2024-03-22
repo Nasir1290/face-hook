@@ -63,8 +63,7 @@
         }
       ],
       "likes": [
-        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-        "a302564e-6e49-4dd7-93f8-c740835f3e4b"
+        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56"
       ],
       "createAt": "2024-02-24T12:17:09.169Z"
     },
@@ -108,11 +107,20 @@
             "name": "Saad Hasan",
             "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
           }
+        },
+        {
+          "id": "915c5a2b-f878-4f0b-8973-b68ce93e1e48",
+          "comment": "hi",
+          "createdAt": "2024-03-21T10:21:03.374Z",
+          "author": {
+            "id": "a302564e-6e49-4dd7-93f8-c740835f3e4b",
+            "name": "Rahim Sikder",
+            "avatar": "uploads/avatar/avatar-1711009129047-586440443.jpg"
+          }
         }
       ],
       "likes": [
-        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-        "a302564e-6e49-4dd7-93f8-c740835f3e4b"
+        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56"
       ],
       "createAt": "2024-02-24T12:18:21.686Z"
     },

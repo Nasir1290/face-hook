@@ -4,20 +4,25 @@ import CommentIcon from "../../assets/icons/comment.svg";
 import ShareIcon from "../../assets/icons/share.svg";
 import LikeFilled from "../../assets/icons/like-fill.png";
 import useAxiosAuthentication from "../../hooks/useAxiosAuthentication";
+import useAuth from "../../hooks/useAuth";
 
-const PostAction = ({ postId, commentCount }) => {
+const PostAction = ({ post, commentCount }) => {
+  const { auth } = useAuth();
+
   const api = useAxiosAuthentication();
-  const [isLike, setIsLike] = useState(false);
+
+  const [isLike, setIsLike] = useState(post?.likes.includes(auth?.user?.id));
+
   const handleLike = async () => {
     try {
       const response = await api.patch(
-        `${import.meta.env.VITE_SERVER_BASE_URL}/posts/${postId}/like`
+        `${import.meta.env.VITE_SERVER_BASE_URL}/posts/${post?.id}/like`
       );
       if (response.status === 200) {
         setIsLike((prevState) => !prevState);
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
   return (
