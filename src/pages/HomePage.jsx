@@ -4,9 +4,11 @@ import { initialState, postsReducer } from "../reducers/postsReducer";
 import { actions } from "../actions";
 import useAxiosAuthentication from "../hooks/useAxiosAuthentication";
 import { usePost } from "../hooks/usePost";
+import NewPost from "../components/posts/NewPost";
 
 const HomePage = () => {
   const { state, dispatch } = usePost();
+
   const api = useAxiosAuthentication();
   useEffect(() => {
     dispatch({
@@ -45,7 +47,16 @@ const HomePage = () => {
     return <div> OOPS !! An Error Occured !!!!</div>;
   }
 
-  return <>{!!state.posts && <PostList posts={state.posts} />}</>;
+  return (
+    <>
+      {!!state.posts && (
+        <>
+          <NewPost state={state}/>
+          <PostList posts={state.posts} />
+        </>
+      )}
+    </>
+  );
 };
 
 export default HomePage;

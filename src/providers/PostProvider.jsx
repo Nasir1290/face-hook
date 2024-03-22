@@ -6,7 +6,7 @@ const PostProvider = ({children}) => {
     const [state,dispatch] = useReducer(postsReducer,initialState)
   return (
     <postContext.Provider value={{state,dispatch}}>
-      
+      {children}
     </postContext.Provider>
   )
 }

@@ -14,7 +14,7 @@ const RegistrationForm = () => {
   } = useForm();
 
   const submitForm = async (formData) => {
-    console.log(formData);
+    
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_SERVER_BASE_URL}/auth/register`,

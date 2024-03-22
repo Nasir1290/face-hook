@@ -5,18 +5,22 @@ import useAxiosAuthentication from "../../hooks/useAxiosAuthentication";
 
 const PostComments = ({ post }) => {
   const [comments, setComments] = useState(post?.comments);
-  const [comment, setComment] = useState(null);
+  const [comment, setComment] = useState("");
+
   const [showAllComments, setShowAllComments] = useState(false);
+
   const { avatarUrl } = useAvatar(post);
+
   const api = useAxiosAuthentication();
 
   const handleAddComment = async (event) => {
     const keyCode = event.keyCode;
+
     try {
       if (keyCode === 13) {
         const response = await api.patch(
           `${import.meta.env.VITE_SERVER_BASE_URL}/posts/${post?.id}/comment`,
-          {comment}
+          { comment }
         );
 
         if (response.status === 200) {
@@ -29,6 +33,7 @@ const PostComments = ({ post }) => {
   const handleSHowAllComments = () => {
     setShowAllComments((prevState) => !prevState);
   };
+
   return (
     <div>
       <div className="flex-center mb-3 gap-2 lg:gap-4">

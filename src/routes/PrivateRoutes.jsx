@@ -3,10 +3,11 @@ import useAuth from "../hooks/useAuth";
 import { Navigate, Outlet } from "react-router-dom";
 import Header from "../common/Header";
 import ProfileProvider from "../providers/ProfileProvider";
+import { usePost } from "../hooks/usePost";
 import PostProvider from "../providers/PostProvider";
-
 const PrivateRoutes = () => {
   const { auth } = useAuth();
+
   return (
     <>
       {auth.user ? (
