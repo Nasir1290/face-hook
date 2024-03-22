@@ -19,7 +19,6 @@ const PostHeader = ({ post }) => {
     <header
     onClick={() => setShowAction( false)}
     className="flex items-center justify-between gap-4">
-      {/* <!-- author info --> */}
       <div className="flex items-center gap-3">
         <img
           className="max-w-10 max-h-10 rounded-full lg:max-h-[58px] lg:max-w-[58px]"
@@ -31,20 +30,17 @@ const PostHeader = ({ post }) => {
           <div className="flex items-center gap-1.5">
             <img src={TimeIcon} alt="time" />
             <span className="text-sm text-gray-400 lg:text-base">
-              {getTimeAgo(post.createAt)}
+              {getTimeAgo(post?.createAt)}
             </span>
           </div>
         </div>
       </div>
-      {/* <!-- author info ends --> */}
 
-      {/* <!-- action dot --> */}
       <div className="relative">
         <button onClick={toggleAction}>
           <img src={ThreeDotIcon} alt="3dots of Action" />
         </button>
 
-        {/* <!-- Action Menus Popup --> */}
 
         {
             showAction &&
@@ -61,7 +57,6 @@ const PostHeader = ({ post }) => {
 }
 
       </div>
-      {/* <!-- action dot ends --> */}
     </header>
   );
 };

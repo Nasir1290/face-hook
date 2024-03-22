@@ -29,11 +29,12 @@ const postsReducer = (state, action) => {
                 error: action.error
             }
             
-            case actions.posts.DATA_EDITED:
+            case actions.posts.DATA_CREATED:
+                console.log(action.data)
                 return {
                     ...state,
                     loading: false,
-                    posts:[...action.posts,actions.data]
+                    posts:[...state.posts,actions.data]
                 }
             case actions.posts.DATA_EDITED:
                 return {

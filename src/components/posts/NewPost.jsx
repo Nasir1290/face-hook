@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import DummyProfilePic from "../../assets/icons/dummy-profile.png";
 import PostEntry from "./PostEntry";
-
+import { useProfile } from "../../hooks/useProfile";
 
 const NewPost = ({ state }) => {
+  const { state: profile } = useProfile();
   const { auth } = useAuth();
+  const user = profile?.user ?? auth?.user;
   const [isProfilePic, setIsProfilePic] = useState(!!auth?.user?.avatar);
   const [showPostEntry, setShowPostEntry] = useState(false);
   return (
     <>
       {showPostEntry ? (
-        <PostEntry />
+        <PostEntry onSubmit={() => setShowPostEntry(false)}/>
       ) : (
         <>
           <div className="card">
@@ -21,7 +23,7 @@ const NewPost = ({ state }) => {
                 src={
                   isProfilePic
                     ? `${import.meta.env.VITE_SERVER_BASE_URL}/${
-                        auth?.user?.avatar
+                       user?.avatar
                       }`
                     : DummyProfilePic
                 }

@@ -25,6 +25,7 @@ const PostComments = ({ post }) => {
 
         if (response.status === 200) {
           setComments([...response.data.comments]);
+          setComment("")
         }
       }
     } catch (error) {}

@@ -1,73 +1,6 @@
 {
   "posts": [
     {
-      "id": "114d6b94-fc94-4d3c-ad86-720a18eaf437",
-      "content": "Part of our LWS Support Team ❤️",
-      "image": "uploads/posts/image-1708777029165-711540010.jpg",
-      "postType": "image",
-      "author": {
-        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-        "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708776329024-653677858.png"
-      },
-      "comments": [
-        {
-          "id": "5425e388-918e-4675-b003-131c5afc4d54",
-          "comment": "সবাইকে অনেক ভালো লাগছে 😍",
-          "createdAt": "2024-02-24T12:35:17.471Z",
-          "author": {
-            "id": "8fc0f0d6-396a-4ef4-922b-27ef5b4e8526",
-            "name": "Tapas Adhikary",
-            "avatar": "uploads/avatar/avatar-1708770640883-148182382.png"
-          }
-        },
-        {
-          "id": "a0e37f88-ffc7-4fc7-952e-81370ff96269",
-          "comment": "Take love ❤️🔥",
-          "createdAt": "2024-02-24T12:36:38.047Z",
-          "author": {
-            "id": "ea168626-058e-49dd-b23c-3000e7bd0172",
-            "name": "Akash Ahmed",
-            "avatar": "uploads/avatar/akash.png"
-          }
-        },
-        {
-          "id": "a0e37f88-ffc7-4fc7-952e-81370ff96269",
-          "comment": "❤️🔥",
-          "createdAt": "2024-02-24T12:36:38.047Z",
-          "author": {
-            "id": "ea168626-058e-49dd-b23c-3000e7bd0173",
-            "name": "MD Salahuddin",
-            "avatar": "salahuddin@email.com"
-          }
-        },
-        {
-          "id": "6b11cbd5-6600-45fa-a586-459d602e321f",
-          "comment": "I am Good",
-          "createdAt": "2024-02-24T21:44:11.924Z",
-          "author": {
-            "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-            "name": "Saad Hasan",
-            "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
-          }
-        },
-        {
-          "id": "9a5453cd-a61c-4b4f-b24b-ad846484c3e5",
-          "comment": "Great show",
-          "createdAt": "2024-02-24T21:46:10.153Z",
-          "author": {
-            "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-            "name": "Saad Hasan",
-            "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
-          }
-        }
-      ],
-      "likes": [
-        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56"
-      ],
-      "createAt": "2024-02-24T12:17:09.169Z"
-    },
-    {
       "id": "fe48c0d2-6b86-4a18-a746-a4253a085421",
       "content": "সেই ২০২০ সাল থেকে বিগিনার থেকে শুরু করে ইন্টারমিডিয়েট লেভেল পর্যন্ত ওয়েব ডেভেলপারদেরকে জাভাস্ক্রিপ্ট এবং রিয়্যাক্ট শিখাচ্ছি। এই ৩ বছর ধরে অর্জিত আমার অভিজ্ঞতা থেকে আমি বুঝতে পেরেছি, বর্তমান সময়ে ওয়েব ডেভেলপারদের মূল যে জায়গাটায় গ্যাপ রয়েছে সেটা হলো, রিয়্যাক্টিভ ওয়েব ডেভেলপমেন্টের মৌলিক বিষয় গুলো এবং জটিল কনসেপ্ট গুলো সম্পর্কে পরিপূর্ণ ধারণার অভাব। সেই সাথে এই প্রতিযোগিতাপূর্ণ মার্কেটে সবচেয়ে বেশি যে টেকনোলজি গুলোর চাহিদা রয়েছে তার মধ্যে রিয়্যাক্ট এবং নেক্সট জে.এস একেবারে উপরের দিকে। দুটি টেকনোলজিই খুব দ্রুত আপডেট হয়েছে এবং সেটার সাথে তাল মিলাতে গিয়ে রীতিমত হিমসিম খেতে হচ্ছে ডেভেলপারদেরকে।",
       "image": null,
@@ -482,6 +415,253 @@
       "comments": [],
       "likes": [],
       "createAt": "2024-02-25T07:16:53.349Z"
+    },
+    {
+      "id": "d242665f-46f0-497a-884d-51f77649d712",
+      "content": "I have nothing in my mind",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [
+        {
+          "id": "9e195304-0201-4546-a8d0-889f90704e15",
+          "comment": "nice mindset",
+          "createdAt": "2024-03-22T08:12:14.895Z",
+          "author": {
+            "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+            "name": "Nasir Mia",
+            "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+          }
+        },
+        {
+          "id": "384be2de-e379-4e67-b189-5814677028b7",
+          "comment": "nice mindset",
+          "createdAt": "2024-03-22T08:13:20.750Z",
+          "author": {
+            "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+            "name": "Nasir Mia",
+            "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+          }
+        }
+      ],
+      "likes": [
+        "6c591594-e320-4fcd-9d3f-ed80605a0bff"
+      ],
+      "createAt": "2024-03-22T08:10:28.246Z"
+    },
+    {
+      "id": "3aee7ae9-65f5-4ce3-b405-f847b147e91f",
+      "content": "now I have something on my mind",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T08:13:56.134Z"
+    },
+    {
+      "id": "870451de-7e05-4cae-9c70-ee40af453309",
+      "content": "hello",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T08:17:17.443Z"
+    },
+    {
+      "id": "c824db3f-fe39-4cd6-924f-88b705d04c93",
+      "content": "hel",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T08:25:08.824Z"
+    },
+    {
+      "id": "b33811ea-fab0-42d4-a50d-846a0602ba50",
+      "content": "hoo",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T08:30:19.203Z"
+    },
+    {
+      "id": "ed574b7d-24fd-4a71-abb5-cdef82b4b54b",
+      "content": "hoo",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T08:31:03.526Z"
+    },
+    {
+      "id": "d4567fea-006f-4126-ae2c-2463db5c5f15",
+      "content": "hi",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T08:38:10.939Z"
+    },
+    {
+      "id": "316a632b-cdbb-4b26-a40e-ec580fb5900f",
+      "content": "hi",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T08:39:13.264Z"
+    },
+    {
+      "id": "22c24301-8f98-43fa-934e-feee9a29842b",
+      "content": "holly",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T08:40:22.595Z"
+    },
+    {
+      "id": "fcc7f181-bf03-4a15-984d-2ac469bc8e46",
+      "content": "a",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T09:08:24.258Z"
+    },
+    {
+      "id": "4dd2c68d-7398-4ca6-8b29-791d51a648af",
+      "content": "ab",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T09:11:15.230Z"
+    },
+    {
+      "id": "d86878ec-0a03-406c-9252-e8598f7d7ea5",
+      "content": "aaa",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T09:14:16.004Z"
+    },
+    {
+      "id": "ed16513d-faa8-4ff8-80dc-b3234e1c3ea2",
+      "content": "a",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T09:17:31.497Z"
+    },
+    {
+      "id": "7ef29942-e573-408f-bb50-7679c5adfde3",
+      "content": "aaa",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T09:18:56.023Z"
+    },
+    {
+      "id": "ca0abbfc-bc19-492f-b28e-207132ed3c38",
+      "content": "aa",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T09:19:51.976Z"
+    },
+    {
+      "id": "ef961bc0-5e1b-4c3f-8659-bbc83d01b403",
+      "content": "abgh",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6c591594-e320-4fcd-9d3f-ed80605a0bff",
+        "name": "Nasir Mia",
+        "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-22T09:20:28.510Z"
     }
   ],
   "comments": [],
@@ -575,7 +755,7 @@
       "password": "$2b$08$S.uDRbvdjaUlWdnlSebxWOWu6FRQ97CKltLtAxegp56laUvrqrAcO",
       "firstName": "Nasir",
       "lastName": "Mia",
-      "avatar": "uploads/avatar/avatar-1711082326313-211044341.jpg",
+      "avatar": "uploads/avatar/avatar-1711091297212-554225507.jpg",
       "email": "americamia339@gmail.com"
     },
     {
